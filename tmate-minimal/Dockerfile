@@ -10,11 +10,11 @@ RUN apt-get update && apt-get -y install ca-certificates tzdata libgl1 libgomp1 
 # Use bash as default shell instead of dash
 RUN ln -sf /bin/bash /bin/sh
 
-RUN useradd --no-log-init --create-home --shell /bin/bash --uid 1100 --no-user-group jovyan
-COPY --chown=jovyan --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
+# RUN useradd --no-log-init --create-home --shell /bin/bash --uid 2000 --no-user-group jovyan
+COPY --chown=ubuntu --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
 
-USER jovyan
+USER ubuntu
 ENV PYDEVD_DISABLE_FILE_VALIDATION=1
-ENV USER=jovyan
-WORKDIR /home/jovyan
+ENV USER=ubuntu
+WORKDIR /home/ubuntu
 CMD ["entrypoint.sh"]
