@@ -15,6 +15,7 @@ COPY --chown=ubuntu --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
 
 USER ubuntu
 ENV PYDEVD_DISABLE_FILE_VALIDATION=1
+ENV LC_ALL="C"
 ENV USER=ubuntu
 WORKDIR /home/ubuntu
 CMD ["entrypoint.sh"]
