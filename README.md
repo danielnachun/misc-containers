@@ -1,0 +1,1 @@
+This repository has a simple and generic pipeline to build Docker containers and push them to ghcr.io, quay.io and docker.io.  New containers can be created by making a new folder and adding a Dockerfile to that folder.  If the container builds, upon merging it is pushed to the registries.
