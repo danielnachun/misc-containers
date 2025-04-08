@@ -9,6 +9,7 @@ RUN apt-get update && apt-get -y install ca-certificates tzdata libgl1 libgomp1 
 
 # Use bash as default shell instead of dash
 RUN ln -sf /bin/bash /bin/sh
+RUN usermod -a -G users ubuntu
 
 USER ubuntu
 ENV PYDEVD_DISABLE_FILE_VALIDATION=1
