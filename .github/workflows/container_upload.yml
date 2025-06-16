@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Download changed directories
         id: download-changed-directories
-        uses: dawidd6/action-download-artifact@v10
+        uses: dawidd6/action-download-artifact@v11
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: container_build.yml
